@@ -1,7 +1,10 @@
 # Step 1
 ```
 sudo pacman -R nano
-sudo pacman -S neovim
+sudo pacman -S thunar meson nwg-look papirus-icon-theme fastfetch pkg file powerline-fonts inetutils yay ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim
+
+yay -S hyprshot
+
 ```
 
 # Step 2
@@ -47,6 +50,7 @@ kb_option = grp:win_space_toggle
 ```
 $mainMod = Mod1 # Sets "Windows" key as main modifier
 
+bind = $mainMod, L, exec, hyprlock
 bind = $mainMod, RETURN, exec, $terminal
 bind = $mainMod, E, exec, $fileManager
 bind = $mainMod, B, exec, chromium
@@ -95,7 +99,7 @@ cd Graphite-gtk-theme
 ./install.sh
 ```
 
-# Step 5
+# Step 6
 
 **Zsh themes**
 
@@ -111,5 +115,13 @@ nvim ~/.zshrc
 ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 source ~/.zshrc
+
+chsh
+/bin/zshrc
+```
+
+
+
+
 
 
