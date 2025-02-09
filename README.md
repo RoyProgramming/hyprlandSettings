@@ -17,10 +17,12 @@ sudo pacman -S neovim
 `monitor= eDP-1,1920x1080@144,0x0,1`
 
 **Set programs that you use**
-```$terminal = kitty
+```
+$terminal = kitty
 $fileManager = thunar
 $menu = wofi --show drun
-$browser = chromium```
+$browser = chromium
+```
 
 **Uncomment**
 `exec-once = waybar & hyprpaper`
