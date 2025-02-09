@@ -44,6 +44,7 @@ kb_option = grp:win_space_toggle
 
 **KEYBINDINGS**
 
+```
 $mainMod = Mod1 # Sets "Windows" key as main modifier
 
 bind = $mainMod, RETURN, exec, $terminal
@@ -55,6 +56,7 @@ bind =, PRINT, exec, hyprshot -m region
 bindel = , XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindel = , XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindl = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
+```
 
 # Step 3
 
