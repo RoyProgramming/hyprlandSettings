@@ -1,7 +1,7 @@
 # Step 1
 ```
 sudo pacman -R nano
-sudo pacman -S thunar meson nwg-look papirus-icon-theme fastfetch pkg file powerline-fonts inetutils yay ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim
+sudo pacman -S thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim
 
 yay -S hyprshot
 
