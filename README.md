@@ -1,7 +1,7 @@
 # Step 1
 ```
 sudo pacman -R nano dolphin
-sudo pacman -S obsidian pavucontrol opencv vtk iobs-studio feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim
+sudo pacman -S ttf-font-awesome otf-font-awesome ttf-jetbrains-mono ttf-dejavu obsidian pavucontrol opencv vtk iobs-studio feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim
 
 yay -S hyprshot
 
