@@ -3,7 +3,7 @@
 sudo pacman -R nano dolphin
 sudo pacman -S ttf-font-awesome otf-font-awesome ttf-jetbrains-mono ttf-dejavu obsidian pavucontrol opencv vtk iobs-studio feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim code ttf-dejavu rofi bluez bluez-utils blueman obs-studio telegram-desktop vlc
 
-yay -S hyprshot onlyoffice-bin
+yay -S pcl hyprshot onlyoffice-bin
 
 ```
 
