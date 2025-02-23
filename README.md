@@ -1,9 +1,9 @@
 # Step 1
 ```
 sudo pacman -R nano dolphin
-sudo pacman -S qtcreator git hyprlock hyprpaper waybar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono ttf-dejavu obsidian pavucontrol opencv vtk feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim code ttf-dejavu rofi bluez bluez-utils blueman obs-studio telegram-desktop vlc
+sudo pacman -S zsh clang qtcreator git hyprlock hyprpaper waybar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono ttf-dejavu obsidian pavucontrol opencv vtk feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim code ttf-dejavu rofi bluez bluez-utils blueman obs-studio telegram-desktop vlc
 
-yay -S pcl hyprshot onlyoffice-bin pcl
+yay -S pcl hyprshot onlyoffice-bin pcl wlogout
 
 ```
 
@@ -12,7 +12,10 @@ yay -S pcl hyprshot onlyoffice-bin pcl
 **Add repos**
 
 ```
+cd Documents
+
 git clone git@github.com:vinceliuice/Graphite-gtk-theme.git
+git clone git@github.com:RoyProgramming/hyprlandSettings.git
 ```
 
 # Step 3
@@ -20,11 +23,8 @@ git clone git@github.com:vinceliuice/Graphite-gtk-theme.git
 **Copy config**
 
 ```
-cd hyprland-config
+cd hyprlandSettings
 cp -r kitty waybar wlogout wofi hypr nvim ~/.config
-
-cd bspwm
-cp -r nvim ~/.config
 
 cd Graphite-gtk-theme
 ./install.sh
@@ -45,8 +45,6 @@ git config --global user.name "RoyProgramming"
 **Zsh themes**
 
 ```
-sudo pacman -S zsh
-
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -59,6 +57,8 @@ source ~/.zshrc
 
 chsh
 /bin/zshrc
+
+reboot
 ```
 
 
