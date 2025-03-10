@@ -7,21 +7,21 @@
     "modules-left": [
       "hyprland/workspaces"
     ],
-    "modules-center": [
-      "hyprland/window"
-    ],
+    // "modules-center": [
+    //  "hyprland/window"
+    //],
     "modules-right": [
     "hyprland/language",
     "pulseaudio",
     "cpu",
-    "battery",
     "memory",
-    "network",
     "temperature",
+    "battery",
+    "network",
     "clock",
     "custom/exit"
     ],
-    "hyprland/window": {
+       "hyprland/window": {
       "format": "{}",
       "max-length": 35,
       "rewrite": {
@@ -77,8 +77,15 @@
       "format-disconnected": " ⚠ ",
       "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+    "hyprland/language": {
+    "format": "{short}",
+    "rewrite": {
+        "Russian": "RU",
+        "English (US)": "ENG"
+    }
+    },
     "pulseaudio": {
-      "format": "{icon}  {volume}%",
+      "format": "{icon} {volume}%",
       "format-bluetooth": "{volume}% {icon} {format_source}",
       "format-bluetooth-muted": " {icon} {format_source}",
       "format-muted": " {format_source}",

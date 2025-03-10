@@ -13,24 +13,17 @@ window#waybar {
 }
 
 button {
-  /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
-  /* Avoid rounded borders under each button name */
   border: none;
   border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
   background: inherit;
   box-shadow: inset 0 -3px #ffffff;
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-  background-color: @surface2;
-}
-
+/* Рабочие пространства */
 #workspaces button {
   padding: 0 5px;
   background-color: transparent;
@@ -47,63 +40,92 @@ button:hover {
   box-shadow: inset 0 -3px #ffffff;
 }
 
-#workspaces button.urgent {
-  background-color: #eb4d4b;
-}
-
-#mode {
-  background-color: #64727d;
-  box-shadow: inset 0 -3px #ffffff;
-}
-
-#clock,
-#battery,
-#cpu,
-#memory,
-#temperature,
-#network,
-#pulseaudio {
-  padding: 0 10px;
-}
-
-#pulseaudio {
-  color: @maroon;
-}
-
-#network {
-  color: @yellow;
-}
-
-#temperature {
-  color: @sky;
-}
-
-#battery {
-  color: @green;
-}
-
-#clock {
-  color: @flamingo;
-}
-
+/* Группа CPU/Memory/Temperature (тёмная) */
 #cpu {
   color: @peach;
+  background-color: @mantle;
+  border: 1px solid @surface0;
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  margin-left: 5px;
+  padding: 0 12px;
 }
 
 #memory {
   color: @green;
+  background-color: @mantle;
+  border-top: 1px solid @surface0;
+  border-bottom: 1px solid @surface0;
+  padding: 0 12px;
 }
 
-#window {
-  color: @text;
+#temperature {
+  color: @sky;
+  background-color: @mantle;
+  border: 1px solid @surface0;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  padding: 0 12px;
+  margin-right: 5px;
 }
 
+/* Группа Language/PulseAudio (тёмная) */
+#hyprland-language {
+  color: @lavender;
+  background-color: @mantle;
+  border: 1px solid @surface0;
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  padding: 0 12px;
+}
+
+#pulseaudio {
+  color: @maroon;
+  background-color: @mantle;
+  border: 1px solid @surface0;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  padding: 0 12px;
+  margin-right: 5px;
+}
+
+/* Группа Battery/Network/Clock (тёмная) */
+#battery {
+  color: @green;
+  background-color: @mantle;
+  border: 1px solid @surface0;
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
+  padding: 0 12px;
+  margin-right: 0;
+}
+
+#network {
+  color: @yellow;
+  background-color: @mantle;
+  border-top: 1px solid @surface0;
+  border-bottom: 1px solid @surface0;
+  padding: 0 12px;
+}
+
+#clock {
+  color: @flamingo;
+  background-color: @mantle;
+  border: 1px solid @surface0;
+  border-left: 0;
+  border-radius: 0 8px 8px 0;
+  padding: 0 12px;
+  margin-right: 5px;
+}
+
+/* Общие стили */
 .modules-right,
 .modules-left,
 .modules-center {
   background-color: @base;
   border-radius: 15px;
 }
+
 .modules-right {
   padding: 0 10px;
 }
@@ -115,6 +137,11 @@ button:hover {
 .modules-center {
   padding: 0 10px;
 }
+
+#window {
+  color: @text;
+}
+
 #battery.charging,
 #battery.plugged {
   color: @sapphire;
@@ -126,7 +153,6 @@ button:hover {
   }
 }
 
-/* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
   color: #ffffff;
@@ -137,10 +163,19 @@ button:hover {
   animation-direction: alternate;
 }
 
-label:focus {
-  background-color: #000000;
-}
-
 #pulseaudio.muted {
   color: @text;
+}
+
+/* Анимации при наведении */
+#cpu:hover,
+#memory:hover,
+#temperature:hover,
+#hyprland-language:hover,
+#pulseaudio:hover,
+#battery:hover,
+#network:hover,
+#clock:hover {
+  background-color: @surface0;
+  transition: background-color 0.3s ease;
 }
