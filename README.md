@@ -1,14 +1,14 @@
 # Step 1
 ```
 sudo pacman -R nano dolphin
-sudo pacman -S python-pip wofi kitty freetype2 openmpi jdk-openjdk java-environment zsh clang qtcreator git hyprlock hyprpaper waybar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono ttf-dejavu obsidian pavucontrol opencv vtk feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim code ttf-dejavu bluez bluez-utils blueman obs-studio telegram-desktop vlc nvidia nvidia-utils nvidia-settings libva-nvidia-driver
+sudo pacman -S wofi kitty freetype2 openmpi jdk-openjdk java-environment zsh clang qtcreator git hyprlock hyprpaper waybar ttf-font-awesome otf-font-awesome ttf-jetbrains-mono ttf-dejavu obsidian pavucontrol opencv vtk feh ranger thunar meson nwg-look papirus-icon-theme fastfetch file powerline-fonts inetutils ttf-font-awesome otf-font-awesome ttf-jetbrains-mono neovim code ttf-dejavu bluez bluez-utils blueman obs-studio telegram-desktop vlc nvidia nvidia-utils nvidia-settings libva-nvidia-driver
 
 sudo pacman -S --needed git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 
-yay -S hyprshot onlyoffice-bin pcl wlogout
+yay -S python312 hyprshot onlyoffice-bin pcl wlogout
 
 ```
 # Step 2
